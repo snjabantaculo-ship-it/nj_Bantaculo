@@ -1,0 +1,298 @@
+
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4ec;
+    color: #243d31;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #173c2e;
+    color: white;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.logo {
+    text-align: center;
+    padding: 15px 0 30px;
+}
+
+.logo h2 {
+    font-family: Georgia, serif;
+}
+
+.logo p {
+    font-size: 12px;
+    margin-top: 8px;
+    color: #cbd9c8;
+}
+
+/* NAVIGATION MENU */
+
+.menu h4 {
+    color: #d6c47e;
+    font-size: 11px;
+    margin: 20px 10px 10px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    margin-bottom: 7px;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: #e4eee3;
+    padding: 12px;
+    border-radius: 9px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: #d6c47e;
+    color: #173c2e;
+    padding-left: 20px;
+}
+
+/* SIDEBAR FOOTER */
+
+.sidebar-footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px 0;
+    color: #cbd9c8;
+    font-size: 12px;
+}
+
+/* MAIN CONTAINER */
+
+.main-container {
+    margin-left: 250px;
+    min-height: 100vh;
+}
+
+/* TOP HEADER */
+
+.top-header {
+    background: white;
+    padding: 25px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.small-title {
+    color: #9a8651;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.top-header h1 {
+    font-family: Georgia, serif;
+    margin-top: 5px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile span {
+    background: #e2eadf;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+/* MAIN CONTENT */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+.content-section {
+    margin-bottom: 30px;
+    scroll-margin-top: 20px;
+}
+
+.content-section h2 {
+    font-family: Georgia, serif;
+    margin-bottom: 18px;
+    color: #315b43;
+}
+
+.content-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+}
+
+.content-card p {
+    margin-top: 10px;
+    line-height: 1.7;
+}
+
+.content-card ul {
+    padding-left: 20px;
+    margin-top: 12px;
+    line-height: 2;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 350px;
+    background:
+        linear-gradient(
+            rgba(10,35,25,0.65),
+            rgba(10,35,25,0.65)
+        ),
+        url("../images/home.jpg") center/cover;
+
+    display: flex;
+    align-items: center;
+    border-radius: 18px;
+    padding: 40px;
+    color: white;
+}
+
+.hero-text {
+    max-width: 550px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 35px;
+}
+
+.hero p {
+    margin: 20px 0;
+    line-height: 1.7;
+}
+
+.button {
+    display: inline-block;
+    background: #d6c47e;
+    color: #173c2e;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* IMAGES */
+
+.content-card img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    background: #173c2e;
+    color: white;
+    padding: 25px;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media screen and (max-width: 850px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .main-container {
+        margin-left: 190px;
+    }
+
+    .top-header {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu a {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .main-container {
+        margin-left: 0;
+    }
+
+    .top-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .hero {
+        min-height: 300px;
+        padding: 25px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+}
